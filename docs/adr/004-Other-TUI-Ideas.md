@@ -1,0 +1,45 @@
+# Other Ideas for Useful TUIs
+
+- [Build tool to statically analyze and explore call stacks in Python](https://github.com/KyleKing/calcipy/issues/99)
+- [`jsonl viewer`: converts JSONL files to column view with `jq`-like syntax](https://github.com/KyleKing/dash_charts/issues/6)
+- `lf-clone`: TUI file browser (There isn't much to improve upon for Finder and [lf](https://github.com/gokcehan/lf))
+    - "Advanced Renamer"-like glob matching
+    - Selection: All / Multi-Select / Invert Selection
+    - Tools: Copy, Cut, Paste, Delete
+    - `z` directory jumping
+    - Integration with Preview?
+        - https://osxdaily.com/2007/12/24/use-quick-look-from-the-command-line/
+        - https://www.google.com/search?q=%22qlmanage%22%20%22Permission%20denied%22%20%22com.apple.coredrag%22
+    - Multiple sessions with shared clipboard (could use sqlite?)
+- `snippet collector`: not really a TUI, but related to dotfiles as described in [003-Not-Just-a-Dotfile-Manager.md](./003-Not-Just-a-Dotfile-Manager.md)
+    - Scrape shell snippets from open source projects
+        - Would need a shell syntax parser
+        - [What is the best way to parse shell-like syntax without a lexer?](https://news.ycombinator.com/item?id=30815507)
+        - [MORBIG Static POSIX Parser PDF](https://hal.archives-ouvertes.fr/hal-01890044/document) and on [Science Direct](https://www.sciencedirect.com/science/article/abs/pii/S2590118420300046?fr=RR-2&ref=pdf_download&rr=734b6b9349456fbc)
+        - [Could write PEG](https://github.com/pyparsing/pyparsing/blob/master/examples/lua_parser.py) for identifying the purpose of the snippet
+        - [shellcheck](https://github.com/koalaman/shellcheck) could have some relevant example code
+        - [js-based parser](https://github.com/grncdr/js-shell-parse/blob/master/grammar.pegjs)
+    - Would help with discovery of relevant snippets
+        - Could be really cool to show as a word cloud of related aliases around the relevant tool
+        - Could be used with `pan` (below) to find snippets from your local directory and match them up to documentation
+- Better snippet management in general
+    - I would like to be able to ask, "where does this snippet come from" and have it identified in the terminal
+        - This could be done with `ripgrep` and scoped to only files managed by the dotfile tool
+    - Could consider moving commands to `/bin` to avoid the overhead of sourcing everytime as aliases and to make them more discoverable
+- `pan` (`personal-man`): Personal Documentation files from the CLI
+    - Inspired by the naming convention for `bat` vs. `cat`
+    - Create directory of markdown files
+        - Find by filename with https://github.com/sharkdp/fd and https://github.com/jez/as-tree
+        - Find by content with `ripgrep`
+        - Option to see best matches and choose ([gum](https://github.com/charmbracelet/gum)) or just open first match
+    - Distribute as a [homebrew tap](https://docs.brew.sh/Taps) ([formulae docs](https://docs.brew.sh/Adding-Software-to-Homebrew), [possible example](https://scribe.rip/indie-mac-app-devops-with-github-actions-b16764a3ebe7), and [lazygit tap](https://github.com/jesseduffield/homebrew-lazygit))
+        - Could write in plain bash or be lazy and use Python
+    - On PyPi/brew, use the name "personal-man" because `pan` is taken (and has 49 weekly downloads)
+        - In Python, make search (`rg/grep`), find (`fd/find`), and directory (`PAN_DIR`) configurable
+            - `PAN_DIR` would have a good default, but could also be symlinked to be managed manually in Obsidian or other markdown editor
+        - "pans" for search? versus "pan" to find by name?
+            - If no match, offer to create based on man page (could check in background to see if available?) or check "--help"
+            - [Consider CLI guidelines](https://docs.chocolatey.org/en-us/choco/commands/#scripting-integration-best-practices-style-guide)
+    - Would like to have a [local (and personalized) version of something like this](https://www.commands.dev/?_cio_id=eac40600cadb01cbdb01)
+        - Examples: could collect and [save frequently used snippets for tools like `cloc`](https://www.tecmint.com/cloc-count-lines-of-code-in-linux/)
+        - Could make a quick help page for TUIs that don't have one, such as `lf` where I have: `y` copy, `p` - paste, `v` invert selection, `space` - select, and `Del` - delete

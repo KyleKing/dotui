@@ -1,0 +1,44 @@
+[
+    {
+        "answers": [
+            "Make `yadm clone` work from anywhere. Stop `yadm add .` from trying to add everything / requiring access to all dirs. Allow defaults in templates for when env vars do not exist + error if env var not found and no default.",
+            "I would have yadm be more verbose about what it was doing under the hood. It's a great tool, but feels a little too magicky for me."
+        ],
+        "id": "1659105327355",
+        "text": "As an open-ended question, what change(s) would you make to yadm?"
+    },
+    {
+        "answers": [
+            "Better descriptions over which diff is local vs. remote when pulling upstream changes;Better integration with Git applications, such as Gitkrakken, Github Desktop, etc.;Better listing of which files are currently managed by yadm;Easier conflict resolution if local changes conflict with upstream",
+            "Better description of what changes to the diff would do to local files;Better descriptions over which diff is local vs. remote when pulling upstream changes;Better listing of which files are currently managed by yadm"
+        ],
+        "id": "1659105366133",
+        "text": "What features would help interacting with git/syncing for yadm?"
+    },
+    {
+        "answers": [
+            "Easier way to regenerate templates when you want to change a variable;Notification of new changes in upstream that should be synced",
+            "Better way to discover code snippets that may be useful;Built-in identification of possible secrets in code before allowing a commit;Composability to sync partial snippets from coworkers and peers without syncing all of them;Easier setup of new computers"
+        ],
+        "id": "1659112212277",
+        "text": "Where could yadm make managing dotfiles easier?"
+    },
+    {
+        "answers": ["",""],
+        "id": "1659105681017",
+        "text": "If you selected Other(s), what are those?"
+    },
+    {
+        "answers": [
+            "Can be confusing when first setting up to align shared dotfiles with existing local - `git reset --hard HEAD` seems too forceful. Templates break too easily / don't error when they should.",
+            "While syncing dot files is fantastic among collaborators at any project, I would prefer if the entire files didn't have to be synced. A selective sync/composability would be the killer feature for me."
+        ],
+        "id": "1659105400230",
+        "text": "Could you explain more about how those changes might better meet your needs?"
+    },
+    {
+        "answers": ["transcrypt","transcrypt"],
+        "id": "1659105415802",
+        "text": "As a check that you know yadm, what is one library that can be used for encryption and decryption?"
+    }
+]
