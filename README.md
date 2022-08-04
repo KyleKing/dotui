@@ -2,7 +2,7 @@
 
 > **Note**
 >
-> This repository captures the output from my final project for the Summer 2022 semester of CS-6750 Human Computer Interactions.
+> This repository captures the output from my [final project](https://omscs6750.gatech.edu/summer-2022/project) for the Summer 2022 semester of CS-6750 Human Computer Interactions.
 > 
 > The [final paper](./docs/adr/CS6750-Final-Project/HCI-Project-King.pdf), [survey data](./docs/adr/CS6750-Final-Project/Survey), and [thoughts on dotui implementation](./docs/adr) can all be found in this repository.
 >
@@ -28,6 +28,6 @@ A few mockups of what the application could look like:
 
 ![Card03-Diff](./docs/adr/CS6750-Final-Project/Prototype/Card03-Diff.png)
 
-And a v0.0.2 mockup where templates are added as plugin:
+And a v0.0.2 mockup where templates are added as a plugin:
 
 ![Card08-Template](./docs/adr/CS6750-Final-Project/Prototype/Card08-Template.png)
